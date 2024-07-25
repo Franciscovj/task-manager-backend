@@ -32,10 +32,6 @@ Este é um repositório para uma API de gerenciamento de tarefas desenvolvida co
     python manage.py runserver
     ```
 
-## Modelo de Task
-
-Abaixo está um exemplo do modelo `Task` utilizado na API:
-
 
  ```sh
 Exemplo de Requisição
