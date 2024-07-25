@@ -36,26 +36,8 @@ Este é um repositório para uma API de gerenciamento de tarefas desenvolvida co
 
 Abaixo está um exemplo do modelo `Task` utilizado na API:
 
-```python
-from django.db import models
 
-class Task(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField(blank=True, null=True)
-    completed = models.BooleanField(default=False, blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    due_date = models.DateTimeField(blank=True, null=True)
-    PRIORITY_CHOICES = [
-        ('L', 'Low'),
-        ('M', 'Medium'),
-        ('H', 'High'),
-    ]
-    priority = models.CharField(max_length=1, choices=PRIORITY_CHOICES, blank=True, null=True)
-
-    def __str__(self):
-        return self.title
-
+ ```sh
 Exemplo de Requisição
 Aqui está um exemplo de uma requisição GET para obter as tarefas:
 
@@ -83,4 +65,4 @@ Vary: Accept
         "priority": "H"
     }
 ]
-
+ ```
